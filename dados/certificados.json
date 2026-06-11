@@ -1,0 +1,44 @@
+[
+  {
+    "codigo": "202-2025-K7PQ-7",
+    "nome": "Aurora Quintal Medeiros",
+    "trilha": "Trilha 1: fundamentos",
+    "concluido_em": "2025-09-12",
+    "carga_horaria": 32,
+    "modulos": [
+      "Fundamentos do trabalho com agentes",
+      "Contexto e prompt",
+      "Ferramentas do dia a dia",
+      "Projeto final"
+    ],
+    "revogado_em": null
+  },
+  {
+    "codigo": "202-2025-MW4H-8",
+    "nome": "Benedito Farol Antunes",
+    "trilha": "Trilha 1: fundamentos",
+    "concluido_em": "2025-10-03",
+    "carga_horaria": 32,
+    "modulos": [
+      "Fundamentos do trabalho com agentes",
+      "Contexto e prompt",
+      "Ferramentas do dia a dia",
+      "Projeto final"
+    ],
+    "revogado_em": null
+  },
+  {
+    "codigo": "202-2025-B3TN-0",
+    "nome": "Clarice Vento Sobral",
+    "trilha": "Trilha 1: fundamentos",
+    "concluido_em": "2025-12-19",
+    "carga_horaria": 32,
+    "modulos": [
+      "Fundamentos do trabalho com agentes",
+      "Contexto e prompt",
+      "Ferramentas do dia a dia",
+      "Projeto final"
+    ],
+    "revogado_em": null
+  }
+]
