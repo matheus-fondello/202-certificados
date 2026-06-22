@@ -1,0 +1,22 @@
+<%- include("partials/cabecalho", { titulo: "Certificados da 202" }) %>
+    <main class="pagina">
+      <p class="label-mono">202</p>
+      <h1 class="titulo">Verificador de certificados</h1>
+      <p class="corpo">
+        Digite o código impresso no certificado para conferir se ele foi mesmo
+        emitido pela 202.
+      </p>
+      <form class="busca" method="post" action="/buscar">
+        <label class="label-mono" for="codigo">Código do certificado</label>
+        <input
+          class="busca__campo"
+          id="codigo"
+          name="codigo"
+          placeholder="202-2026-ABCD-0"
+          autocomplete="off"
+          required
+        >
+        <button class="busca__botao" type="submit">Verificar</button>
+      </form>
+    </main>
+<%- include("partials/rodape") %>
