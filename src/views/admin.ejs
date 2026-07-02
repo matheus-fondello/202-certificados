@@ -1,0 +1,37 @@
+<%- include("partials/cabecalho", { titulo: "Certificados emitidos · 202" }) %>
+    <main class="pagina admin">
+      <p class="label-mono">202 · administração</p>
+      <h1 class="titulo">Certificados emitidos</h1>
+      <p class="corpo"><%= certificados.length %> certificados na lista.</p>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th class="label-mono">Código</th>
+            <th class="label-mono">Nome</th>
+            <th class="label-mono">Trilha</th>
+            <th class="label-mono">Concluído em</th>
+            <th class="label-mono">Carga</th>
+            <th class="label-mono">Situação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% certificados.forEach((certificado) => { %>
+            <tr>
+              <td class="mono"><%= certificado.codigo %></td>
+              <td><%= certificado.nome %></td>
+              <td><%= certificado.trilha %></td>
+              <td><%= formatarData(certificado.concluido_em) %></td>
+              <td><%= certificado.carga_horaria %> h</td>
+              <td>
+                <% if (certificado.revogado_em) { %>
+                  Revogado em <%= formatarData(certificado.revogado_em) %>
+                <% } else { %>
+                  Válido
+                <% } %>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </main>
+<%- include("partials/rodape") %>
