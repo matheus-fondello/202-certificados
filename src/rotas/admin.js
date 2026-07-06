@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { listar } from "../certificados.js";
+import { emitir, listar } from "../certificados.js";
 import { formatarData } from "../formatar.js";
 
 const rotas = Router();
@@ -19,6 +19,15 @@ function exigirToken(requisicao, resposta, proximo) {
 
 rotas.get("/admin", exigirToken, (requisicao, resposta) => {
   resposta.render("admin", { certificados: listar(), formatarData });
+});
+
+rotas.post("/admin/certificados", exigirToken, (requisicao, resposta) => {
+  try {
+    const certificado = emitir(requisicao.body ?? {});
+    resposta.status(201).json(certificado);
+  } catch (erro) {
+    resposta.status(400).json({ erro: erro.message });
+  }
 });
 
 export default rotas;
