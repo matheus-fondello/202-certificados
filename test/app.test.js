@@ -2,6 +2,8 @@ import test, { after, before } from "node:test";
 import assert from "node:assert/strict";
 import app from "../src/app.js";
 
+process.env.ADMIN_TOKEN = "token-de-teste";
+
 const CODIGO_EXISTENTE = "202-2025-K7PQ-7";
 const CODIGO_INEXISTENTE = "202-2026-ZZZZ-9";
 
@@ -47,4 +49,35 @@ test("POST /buscar redireciona para a página do certificado", async () => {
   });
   assert.equal(resposta.status, 302);
   assert.equal(resposta.headers.get("location"), `/c/${CODIGO_EXISTENTE}`);
+});
+
+test("GET /admin sem token responde 401", async () => {
+  const resposta = await fetch(`${base}/admin`);
+  assert.equal(resposta.status, 401);
+});
+
+test("GET /admin com token errado responde 401", async () => {
+  const resposta = await fetch(`${base}/admin`, {
+    headers: { authorization: "Bearer outro-token" }
+  });
+  assert.equal(resposta.status, 401);
+});
+
+test("GET /admin com token responde a lista", async () => {
+  const resposta = await fetch(`${base}/admin`, {
+    headers: { authorization: `Bearer ${process.env.ADMIN_TOKEN}` }
+  });
+  assert.equal(resposta.status, 200);
+  const html = await resposta.text();
+  assert.match(html, /Certificados emitidos/);
+  assert.match(html, /Aurora Quintal Medeiros/);
+});
+
+test("POST /admin/certificados sem token responde 401", async () => {
+  const resposta = await fetch(`${base}/admin/certificados`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ nome: "Fulana de Teste" })
+  });
+  assert.equal(resposta.status, 401);
 });
