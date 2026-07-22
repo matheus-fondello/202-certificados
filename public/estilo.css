@@ -1,0 +1,194 @@
+/* Tokens da marca 202. A fonte da verdade é o design.md da 202; aqui fica só
+   o que este site usa. As famílias de fonte não são carregadas de fora: o
+   navegador pega a primeira que existir na máquina de quem acessa. */
+:root {
+  --preto-202: #0a0a0a;
+  --branco-202: #ffffff;
+  --papel: #f4f2ed;
+  --cinza-texto: #8b8b85;
+  --cinza-linha: #262626;
+  --verde-sinal: #c6ff3e;
+  --verde-tinta: #3d7a00;
+  --dot-matrix: #2e2e2e;
+
+  --font-marca: "The Seasons", "Fraunces", Georgia, "Times New Roman", serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-corpo: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --tracking-label: 0.1em;
+  --leading-corpo: 1.6;
+  --medida-corpo: 65ch;
+
+  --text-titulo: clamp(2.2rem, 4.5vw, 3.4rem);
+  --text-label: 0.75rem;
+
+  --raio: 4px;
+  --hairline: 1px solid var(--cinza-linha);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--preto-202);
+  background-image: radial-gradient(var(--dot-matrix) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--papel);
+  font-family: var(--font-corpo);
+  line-height: var(--leading-corpo);
+  -webkit-font-smoothing: antialiased;
+}
+
+.pagina {
+  width: 100%;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 8vw, 6rem) 1.5rem 4rem;
+  flex: 1 0 auto;
+}
+
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--cinza-texto);
+  margin: 0;
+}
+
+.titulo {
+  font-family: var(--font-display);
+  font-size: var(--text-titulo);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.corpo {
+  max-width: var(--medida-corpo);
+  color: var(--cinza-texto);
+  margin: 0 0 2.5rem;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: var(--papel);
+  text-decoration-color: var(--cinza-texto);
+  text-underline-offset: 0.25em;
+}
+
+a:hover {
+  color: var(--verde-sinal);
+  text-decoration-color: var(--verde-sinal);
+}
+
+/* Consulta */
+.busca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+  max-width: 34rem;
+}
+
+.busca .label-mono {
+  flex: 1 0 100%;
+  margin-bottom: 0.5rem;
+}
+
+.busca__campo {
+  flex: 1 1 18rem;
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  background: transparent;
+  border: var(--hairline);
+  border-radius: var(--raio);
+  color: var(--papel);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.busca__campo::placeholder {
+  color: var(--cinza-linha);
+}
+
+.busca__campo:focus {
+  outline: none;
+  border-color: var(--verde-sinal);
+}
+
+.busca__botao {
+  padding: 0.85rem 1.5rem;
+  border: 0;
+  border-radius: var(--raio);
+  background: var(--verde-sinal);
+  color: var(--preto-202);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.busca__botao:hover {
+  background: var(--branco-202);
+}
+
+/* Certificado */
+.certificado__nome {
+  font-family: var(--font-marca);
+  font-weight: 400;
+  margin: 0.5rem 0 2rem;
+}
+
+.certificado__dados {
+  margin: 0 0 2rem;
+}
+
+.certificado__dado dd {
+  margin: 0.35rem 0 1.25rem;
+}
+
+.certificado__codigo {
+  font-family: var(--font-mono);
+}
+
+/* Administração */
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.tabela th,
+.tabela td {
+  text-align: left;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: var(--hairline);
+  vertical-align: top;
+}
+
+.tabela th {
+  border-bottom-color: var(--cinza-texto);
+}
+
+.rodape {
+  flex: 0 0 auto;
+  max-width: 62rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-top: var(--hairline);
+}
