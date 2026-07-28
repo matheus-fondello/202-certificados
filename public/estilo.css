@@ -20,7 +20,9 @@
   --leading-corpo: 1.6;
   --medida-corpo: 65ch;
 
+  --text-nome: clamp(2.6rem, 7vw, 5rem);
   --text-titulo: clamp(2.2rem, 4.5vw, 3.4rem);
+  --text-subtitulo: clamp(1.25rem, 2.5vw, 1.75rem);
   --text-label: 0.75rem;
 
   --raio: 4px;
@@ -147,22 +149,69 @@ a:hover {
 }
 
 /* Certificado */
+.certificado__cartao {
+  margin: 1.5rem 0 2rem;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: var(--hairline);
+  border-radius: var(--raio);
+  background: rgba(10, 10, 10, 0.92);
+}
+
 .certificado__nome {
   font-family: var(--font-marca);
+  font-size: var(--text-nome);
   font-weight: 400;
-  margin: 0.5rem 0 2rem;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.certificado__trilha {
+  font-family: var(--font-display);
+  font-size: var(--text-subtitulo);
+  color: var(--cinza-texto);
+  margin: 0.75rem 0 0;
 }
 
 .certificado__dados {
-  margin: 0 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1.75rem;
+  margin: clamp(2rem, 5vw, 3rem) 0 0;
+  padding-top: clamp(1.5rem, 4vw, 2.25rem);
+  border-top: var(--hairline);
 }
 
 .certificado__dado dd {
-  margin: 0.35rem 0 1.25rem;
+  margin: 0.5rem 0 0;
 }
 
 .certificado__codigo {
   font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.certificado__situacao {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.certificado__situacao::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.6rem;
+  border-radius: 50%;
+  background: var(--verde-sinal);
+  box-shadow: 0 0 0 4px rgba(198, 255, 62, 0.14);
+  vertical-align: 0.05em;
+}
+
+.certificado__volta {
+  font-size: 0.9rem;
 }
 
 /* Administração */

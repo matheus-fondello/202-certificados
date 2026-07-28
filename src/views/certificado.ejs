@@ -1,22 +1,24 @@
 <%- include("partials/cabecalho", { titulo: certificado.nome + " · Certificado da 202" }) %>
     <main class="pagina certificado">
-      <p class="label-mono">Certificado</p>
-      <h1 class="certificado__nome"><%= certificado.nome %></h1>
-      <dl class="certificado__dados">
-        <div class="certificado__dado">
-          <dt class="label-mono">Trilha</dt>
-          <dd><%= certificado.trilha %></dd>
-        </div>
-        <div class="certificado__dado">
-          <dt class="label-mono">Concluído em</dt>
-          <dd><%= certificado.concluido_em %></dd>
-        </div>
-        <div class="certificado__dado">
-          <dt class="label-mono">Código</dt>
-          <dd class="certificado__codigo"><%= certificado.codigo %></dd>
-        </div>
-      </dl>
-      <p class="certificado__situacao">Válido</p>
+      <p class="label-mono">Certificado verificado</p>
+      <article class="certificado__cartao">
+        <h1 class="certificado__nome"><%= certificado.nome %></h1>
+        <p class="certificado__trilha"><%= certificado.trilha %></p>
+        <dl class="certificado__dados">
+          <div class="certificado__dado">
+            <dt class="label-mono">Concluído em</dt>
+            <dd><%= certificado.concluido_em %></dd>
+          </div>
+          <div class="certificado__dado">
+            <dt class="label-mono">Código</dt>
+            <dd class="certificado__codigo"><%= certificado.codigo %></dd>
+          </div>
+          <div class="certificado__dado">
+            <dt class="label-mono">Situação</dt>
+            <dd class="certificado__situacao">Válido</dd>
+          </div>
+        </dl>
+      </article>
       <p class="certificado__volta"><a href="/">Verificar outro código</a></p>
     </main>
 <%- include("partials/rodape") %>
