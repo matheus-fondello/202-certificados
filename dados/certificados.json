@@ -40,5 +40,75 @@
       "Projeto final"
     ],
     "revogado_em": null
+  },
+  {
+    "codigo": "202-2026-ZD5R-2",
+    "nome": "Dalva Miranda Trevo",
+    "trilha": "Trilha 1: fundamentos",
+    "concluido_em": "2026-03-06",
+    "carga_horaria": 32,
+    "modulos": [
+      "Fundamentos do trabalho com agentes",
+      "Contexto e prompt",
+      "Ferramentas do dia a dia",
+      "Projeto final"
+    ],
+    "revogado_em": null
+  },
+  {
+    "codigo": "202-2026-F9GC-3",
+    "nome": "Eliseu Barroso Cardume",
+    "trilha": "Trilha 2: engenharia com agentes",
+    "concluido_em": "2026-06-26",
+    "carga_horaria": 48,
+    "modulos": [
+      "Agentes no terminal",
+      "Contexto e ferramentas",
+      "Revisão e testes com agentes",
+      "Projeto final"
+    ],
+    "revogado_em": null
+  },
+  {
+    "codigo": "202-2026-LXQ2-5",
+    "nome": "Fabiana Pilar Ocaso",
+    "trilha": "Trilha 2: engenharia com agentes",
+    "concluido_em": "2026-07-10",
+    "carga_horaria": 48,
+    "modulos": [
+      "Agentes no terminal",
+      "Contexto e ferramentas",
+      "Revisão e testes com agentes",
+      "Projeto final"
+    ],
+    "revogado_em": "2026-08-04"
+  },
+  {
+    "codigo": "202-2026-TV6J-1",
+    "nome": "Gaspar Lumiar Teixeira",
+    "trilha": "Trilha 2: engenharia com agentes",
+    "concluido_em": "2026-07-24",
+    "carga_horaria": 48,
+    "modulos": [
+      "Agentes no terminal",
+      "Contexto e ferramentas",
+      "Revisão e testes com agentes",
+      "Projeto final"
+    ],
+    "revogado_em": null
+  },
+  {
+    "codigo": "202-2026-HN8S-2",
+    "nome": "Heloísa Cravo Bandeira",
+    "trilha": "Trilha 2: engenharia com agentes",
+    "concluido_em": "2026-08-05",
+    "carga_horaria": 48,
+    "modulos": [
+      "Agentes no terminal",
+      "Contexto e ferramentas",
+      "Revisão e testes com agentes",
+      "Projeto final"
+    ],
+    "revogado_em": null
   }
 ]
