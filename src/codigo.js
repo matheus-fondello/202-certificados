@@ -3,7 +3,7 @@ import { randomInt } from "node:crypto";
 // Código de certificado: 202-AAAA-XXXX-D
 //
 //   202   prefixo fixo da 202
-//   AAAA  ano de emissão, quatro dígitos
+//   AAAA  ano de conclusão da trilha, quatro dígitos
 //   XXXX  quatro caracteres sorteados do alfabeto abaixo
 //   D     dígito verificador, de 0 a 9
 //
