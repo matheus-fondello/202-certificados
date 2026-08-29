@@ -81,3 +81,8 @@ test("POST /admin/certificados sem token responde 401", async () => {
   });
   assert.equal(resposta.status, 401);
 });
+
+test("GET /c/<código> responde 404 quando o dígito verificador está errado", async () => {
+  const resposta = await fetch(`${base}/c/202-2026-ABCD-0`);
+  assert.equal(resposta.status, 404);
+});

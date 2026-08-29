@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { buscar, normalizarCodigo } from "../certificados.js";
+import { validarCodigo } from "../codigo.js";
 
 const rotas = Router();
 
@@ -18,7 +19,8 @@ rotas.post("/buscar", (requisicao, resposta) => {
 
 rotas.get("/c/:codigo", (requisicao, resposta) => {
   const codigo = normalizarCodigo(requisicao.params.codigo);
-  const certificado = buscar(codigo);
+  // Código com formato ou dígito verificador errado nem chega na lista.
+  const certificado = validarCodigo(codigo) ? buscar(codigo) : undefined;
   if (!certificado) {
     resposta.status(404).render("nao-encontrado");
     return;
