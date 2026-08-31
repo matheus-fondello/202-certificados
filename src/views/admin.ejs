@@ -21,7 +21,7 @@
               <td><%= certificado.nome %></td>
               <td><%= certificado.trilha %></td>
               <td><%= formatarData(certificado.concluido_em) %></td>
-              <td><%= certificado.carga_horaria %> h</td>
+              <td><%= certificado.carga_horaria %> horas</td>
               <td>
                 <% if (certificado.revogado_em) { %>
                   Revogado em <%= formatarData(certificado.revogado_em) %>
