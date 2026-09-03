@@ -61,8 +61,8 @@ curl -X POST http://localhost:3000/admin/certificados \
 ```
 
 Nos dois casos o código sai sorteado: quem emite não escolhe o código. A lista
-do que já foi emitido está em <http://localhost:3000/admin>, que pede o mesmo
-token.
+do que já foi emitido sai de `GET /admin`, com o mesmo cabeçalho de token do
+exemplo acima (o navegador sozinho não passa: é `curl`).
 
 ## O código do certificado
 

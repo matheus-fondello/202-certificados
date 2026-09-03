@@ -17,8 +17,9 @@ Projeto pequeno, convenções curtas. Leia antes de abrir o primeiro PR.
   para as rotas.
 - `npm test` tem que passar antes de abrir o PR. É o mesmo comando que roda
   no CI.
-- Teste que precisa gravar trabalha numa cópia temporária do JSON. Nenhum
-  teste escreve em `dados/certificados.json`.
+- Teste que precisa gravar trabalha numa cópia temporária do JSON: use o
+  `copiaTemporaria()` de `test/certificados.test.js`. Nenhum teste escreve em
+  `dados/certificados.json`.
 
 ## Onde o código mora
 
