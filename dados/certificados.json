@@ -110,5 +110,14 @@
       "Projeto final"
     ],
     "revogado_em": null
+  },
+  {
+    "codigo": "202-2026-4XHG-4",
+    "nome": "Inácio Serrote Amaral",
+    "trilha": "Trilha 1: fundamentos",
+    "concluido_em": "2026-08-28",
+    "carga_horaria": 32,
+    "modulos": [],
+    "revogado_em": null
   }
 ]
