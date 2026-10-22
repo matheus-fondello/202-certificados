@@ -11,7 +11,7 @@
   "scripts": {
     "start": "node --env-file=.env src/servidor.js",
     "dev": "node --watch --env-file=.env src/servidor.js",
-    "test": "node --test test/"
+    "test": "node --test"
   },
   "dependencies": {
     "ejs": "^3.1.10",
